@@ -20,6 +20,6 @@ from my_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/books/",views.BookListCreateAPIView.as_view(),name = "book_list_create"),
+    path("api/books/",views.BookViewCreateAPIView.as_view(),name = "book_list_create"),
 
 ]

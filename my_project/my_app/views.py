@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import MyModel
-from .serializers import MyModelSerializer
+from .models import Book
+from .serializers import BookSerializer
+from rest_framework import generics
 
 
-class BookViewCreateAPIView(generics.ListCreateAPIView)
+class BookViewCreateAPIView(generics.ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
